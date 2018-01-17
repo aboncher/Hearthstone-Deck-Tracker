@@ -1,32 +1,73 @@
 Hearthstone-Deck-Tracker
 ========================
+[![Build status](https://ci.appveyor.com/api/projects/status/3wow545sjaq9ybji/branch/master?svg=true)](https://ci.appveyor.com/project/azeier/hearthstone-deck-tracker/branch/master)
 
-This is an automatic deck tracker for Hearthstone.
+HDT is an automatic deck tracker and manager for Hearthstone.
 
-**Features:**  
-- Tracks cards drawn from deck (or cards left in deck), handcount and drawchances of remaining cards  
-- Tracks cards played by the opponent and his handcount  
+Installation
+=========
+- Requirements:
+  - Windows Vista or higher
+  - .NET Framework 4.5 or higher
+- [Download and run the installer](https://hsdecktracker.net/download/).
+ 
 
-**How it works:**  
-The automated tracking is done my reading out Hearthstone logfile.  
-More information on that  here: http://www.reddit.com/r/hearthstone/comments/268fkk/simple_hearthstone_logging_see_your_complete_play
+FAQ
+=========
+- You can find the [FAQ here](https://github.com/HearthSim/Hearthstone-Deck-Tracker/wiki/FAQ).
 
-**What you need to run this:**
-- Windows Vista or higher (I have not actually tested it on vista but anything above XP should work fine)
-- .NET Framework 4.5
-- If you run this for the first time you will have to restart Hearthstone once for it start logging the way required for this tracker.
 
-**FAQ:**
-- Nothing happens
-  - Try restarting Hearthstone, the Tracker, and try starting the Tracker as Administrator.
-  - If that does not help, go into the config.xml file and delete what's in <HearthstoneDirectory>.
-  - Do you have .NET 4.5 installed?
-- My deck is not on the screen or far off to the right
- - This seems to be a problem with laptops for some reason. You will have to set Custom Width/Height and maybe Offset values in the config.xml. [See here for reference](http://www.reddit.com/r/hearthstone/comments/26seey/automatic_deck_tracker_and_more_with_ingame/chv32lx) 
-tl;dr: Open the config.xml, set VisibleOverlay to true, set CustomWidth and CustomHeight so something around 20% lower than Hearthstone's resolution. You may have to play around with those values a bit. If you have any idea why this happens please contact me
+Contributing
+=========
+- Please read the [coding style and Commit/Pull Request guidelines](https://github.com/HearthSim/Hearthstone-Deck-Tracker/blob/master/CONTRIBUTING.md).
+- Developer Discord: [![joindeveloper#hdt](https://discordapp.com/api/guilds/195326447118712832/widget.png)](https://discord.gg/CBnAFhX)
+- [![Join the chat at https://gitter.im/HearthSim/Hearthstone-Deck-Tracker](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/HearthSim/Hearthstone-Deck-Tracker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)  
 
-**Known Issues:**
-- There seem to be some issues with fullscreen mode in general.
-- Your opponent's deck may cover up some of your friendslist. (You can hide the cards in the options menu though)
-- There may still be some rare problems with the deck/hand counting. If you notice this (and optimally notices what caused it) let me know.
-- Performance when moving the decks on the overlay it not the greatest currently.
+
+Community
+=========
+- Community Discord: [![Join HearthSim #hdt](https://discordapp.com/api/guilds/265636998700728321/widget.png)](https://discord.gg/hearthsim)
+- **HearthSim**: Hearthstone Deck Tracker is a [HearthSim](https://hearthsim.info) project. Come join us in #hearthsim on chat.freenode.net.
+
+Features
+=========
+An in-game overlay:
+
+![Overlay](https://github.com/HearthSim/Hearthstone-Deck-Tracker/raw/master/raw-assets/readme/overlay.png "Overlay")
+
+The app: 
+
+![Tracker](https://github.com/HearthSim/Hearthstone-Deck-Tracker/raw/master/raw-assets/readme/hdt-ui.png "HDT UI")
+
+- **Tracks**:
+  - Cards left in your deck or cards drawn from your deck.
+  - Your handcount, deckcount and draw chances.
+  - Cards played by your opponent.
+  - Your opponent's handcount, deckcount and probablities of him having/drawing cards.
+  - How long your opponent had each card in his hand and what cards have been mulliganed, stolen or returned.  
+- **Timer** for the current turn and total time spent for you and your opponent.  
+- The tracker tries to **automatically select the deck you are playing**.  
+- The cards and timer can either be displayed in an overlay (see screenshot) or in **extra windows** (Options > General > Additional Windows)  
+- **Deck Manager**:
+  - **Import** decks from websites: arenavalue, hearthstats, hearthpwn, hearthhead, hearthstoneplayers, tempostorm, hearthstonetopdeck and hearthnews  
+  - Circumvent the 18 deck limit: Saved decks can be **exported to Hearthstone**. (My Decks > More...)
+  - Decks can be filtered by custom **tags** and sorted by name, date and tags.  
+  - Set **notes** for each deck (My Decks > More...)  
+  - Create **screenshots** of decks (My Decks > More...)  
+  - **Share** your decks by exporting them as xml files or id-strings (My Decks > More...). Both can be imported via New Deck > Import.  
+- **Notifications**: get notified when a game or a turn starts (either by the tray icon flashing or hearthstone popping up)  
+- **Customization**: Almost every feature can be turned on/off separately.
+- **Extensible via plugins**: [available plugins](https://github.com/HearthSim/Hearthstone-Deck-Tracker/wiki/Available-Plugins)
+- **Stats per deck**:
+  - Track the result of each game (win/loss), opponents, game mode and more
+  - Win/loss rate vs each class.
+  - Details for each game (cards drawn, played, etc.).
+  - Select which game modes to track (Options > Other).  
+  - Import your opponent's (partial) deck from a tracked game as a new deck.
+
+![Stats](http://i.imgur.com/Wke3Cuw.png "Deck stats")
+
+
+## License
+
+Copyright © HearthSim. All Rights Reserved.
